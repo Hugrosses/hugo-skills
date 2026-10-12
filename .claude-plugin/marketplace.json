@@ -48,22 +48,15 @@
       "category": "design"
     },
     {
-      "name": "scroll-world",
-      "description": "oso95/scroll-world: scroll-scrubbed 'fly through the world' landing pages. Uses paid Higgsfield + Monid CLIs.",
-      "source": {
-        "source": "github",
-        "repo": "oso95/scroll-world"
-      },
-      "category": "design"
-    },
-    {
       "name": "img2threejs",
       "description": "img2threejs: rebuild an object from a reference image as a procedural Three.js model.",
       "source": {
         "source": "github",
         "repo": "img2threejs/img2threejs"
       },
-      "skills": ["./"],
+      "skills": [
+        "./"
+      ],
       "category": "design"
     }
   ]

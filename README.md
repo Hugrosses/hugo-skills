@@ -18,7 +18,6 @@ Puis installe les plugins :
 /plugin install superpowers@hugo-skills
 /plugin install persistent-memory@hugo-skills
 /plugin install impeccable@hugo-skills
-/plugin install scroll-world@hugo-skills
 /plugin install img2threejs@hugo-skills
 ```
 
@@ -47,7 +46,6 @@ Pour recevoir les mises à jour automatiquement, ouvre `/plugin`, va dans **Mark
 | superpowers | bash. Node seulement pour le compagnon de brainstorming |
 | persistent-memory (claude-mem) | Node ≥ 20.12 et Bun ≥ 1.1.31. Aussi `uv` pour la recherche sémantique Chroma (activée par défaut) |
 | impeccable | curl, et internet au premier lancement : il télécharge son moteur dans `~/.impeccable/bin/` |
-| scroll-world | CLI `higgsfield` connectée (`higgsfield auth login`), CLI `monid` avec un compte approvisionné, ffmpeg. **Payant** : environ 27 $ par séquence vidéo 1080p |
 | img2threejs | Node ≥ 18. Python pour certains scripts de vérification |
 
 ## Contenu
@@ -63,7 +61,6 @@ Pour recevoir les mises à jour automatiquement, ouvre `/plugin`, va dans **Mark
 - `superpowers` (obra/superpowers) : 15 skills, plus un hook au démarrage de chaque session
 - `persistent-memory` (thedotmack/claude-mem) : 23 skills, 8 hooks, un serveur MCP et un worker local sur 127.0.0.1
 - `impeccable` (pbakaus/impeccable) : 1 skill (24 sous-commandes), 4 agents, 3 hooks
-- `scroll-world` (oso95/scroll-world) : 1 skill
 - `img2threejs` (img2threejs/img2threejs) : 1 skill
 
 ## Ce qui n'est pas dedans, et pourquoi
@@ -75,9 +72,12 @@ Pour recevoir les mises à jour automatiquement, ouvre `/plugin`, va dans **Mark
 - **morluto/rea** : rétro-ingénierie de binaires, et il faut aussi son serveur MCP.
 - **code-review** (claude-plugins-official) : `/code-review` est déjà intégré à Claude Code.
 - **lenis, react-bits, gsap** : ce sont des librairies JavaScript, pas des skills.
+- **scroll-world** : payant (vidéos générées via Monid et Higgsfield, environ 27 $ par séquence).
 - **graphify** : il installe son propre skill. Sur chaque machine, lance `uv tool install graphifyy` puis `graphify install`.
 
 ## Limites
+
+- Rien ici n'est payant. claude-mem fait ses résumés avec Claude Haiku, ce qui consomme ton quota d'abonnement Claude, sans frais en plus. N'utilise pas son skill `cloud-sync` : il sert à l'offre payante cmem.ai.
 
 - Les plugins sont installés par machine. Les sessions cloud de Claude Code et les tâches planifiées dans le cloud ne chargent pas les plugins de tes réglages utilisateur.
 - Coût en contexte : environ 6 000 tokens ajoutés à chaque session pour l'ensemble. Pour en retirer un temporairement : `/plugin disable <nom>@hugo-skills`.

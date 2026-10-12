@@ -1,0 +1,70 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hugo-skills",
+  "description": "Hugo's personal Claude Code toolkit: design, animation, dev workflow, memory and browser testing.",
+  "owner": {
+    "name": "Hugo"
+  },
+  "plugins": [
+    {
+      "name": "design-kit",
+      "description": "Curated design skills: taste-skill (4), Emil Kowalski animation & UI polish (10), 5 visual styles from awesome-design-skills.",
+      "source": "./plugins/design-kit",
+      "category": "design"
+    },
+    {
+      "name": "dev-kit",
+      "description": "Browser automation and testing with Microsoft's playwright-cli (requires: npm install -g @playwright/cli@latest).",
+      "source": "./plugins/dev-kit",
+      "category": "development"
+    },
+    {
+      "name": "superpowers",
+      "description": "obra/superpowers: brainstorming, plans, TDD, systematic debugging, code review, subagent workflows (15 skills).",
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers"
+      },
+      "category": "development"
+    },
+    {
+      "name": "persistent-memory",
+      "description": "thedotmack/claude-mem: persistent memory across sessions (hooks, local worker, MCP search). Needs Node 20.12+ and Bun.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thedotmack/claude-mem.git",
+        "path": "plugin"
+      },
+      "category": "productivity"
+    },
+    {
+      "name": "impeccable",
+      "description": "pbakaus/impeccable: frontend design fluency, 1 skill with 24 sub-commands (/impeccable polish, audit, critique...) and design checks after edits.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pbakaus/impeccable.git",
+        "path": "plugin"
+      },
+      "category": "design"
+    },
+    {
+      "name": "scroll-world",
+      "description": "oso95/scroll-world: scroll-scrubbed 'fly through the world' landing pages. Uses paid Higgsfield + Monid CLIs.",
+      "source": {
+        "source": "github",
+        "repo": "oso95/scroll-world"
+      },
+      "category": "design"
+    },
+    {
+      "name": "img2threejs",
+      "description": "img2threejs: rebuild an object from a reference image as a procedural Three.js model.",
+      "source": {
+        "source": "github",
+        "repo": "img2threejs/img2threejs"
+      },
+      "skills": ["./"],
+      "category": "design"
+    }
+  ]
+}

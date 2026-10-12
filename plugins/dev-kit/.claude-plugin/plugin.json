@@ -1,0 +1,7 @@
+{
+  "name": "dev-kit",
+  "description": "Browser automation and testing with Microsoft's playwright-cli (requires: npm install -g @playwright/cli@latest).",
+  "version": "1.0.0",
+  "author": { "name": "Hugo" },
+  "license": "Apache-2.0"
+}
